@@ -82,7 +82,37 @@ function format_number ($t){
 
 	return str_replace("+370", "8", $t);
 }
-$number = "+370 677 77777";
+$number = "+370 677 77777 <br>";
 echo format_number($number);
 
+
+$d1=strtotime("december 24");
+$d2=ceil(($d1-time())/60/60/24);
+echo "Likes laikas iki kaledu " . $d2 ." dienos.<br>";
+
+
+$d1=strtotime("september 1, + 1 year");
+$d2=ceil(($d1-time())/60/60/24);
+echo "Likes laikas iki rugsejo pirmos dienos " . $d2 ." dienos.<br>";
+
+
+$numbers = array(4, 6, 2, 22, 11, 5, 7, 9, 8, 3, 1);
+sort($numbers);
+
+/*$arrlength = count($numbers);
+for($x = 0; $x < $arrlength; $x++) {
+    echo $numbers[$x];
+    echo "<br>";
+
+    if (isset($numbers)) {
+    	
+    }
+}*/
+
+foreach ($numbers as $key => $value) {
+	if ($key != $value) {
+		echo "truksta"; .$key
+		exit();
+	}
+}
  ?> 
